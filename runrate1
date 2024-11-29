@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+
+    while (T--) {
+        int r1, r2, B;
+        cin >> r1 >> r2 >> B;
+
+        // Current run rate
+        double currentRunRate = (double)r2 / (50 - (B / 6.0));
+
+        // Required run rate
+        double requiredRunRate = (double)(r1 + 1 - r2) / (B / 6.0);
+
+        // Print the results with two decimal points
+        cout << fixed << setprecision(2) << currentRunRate << " " << requiredRunRate << endl;
+    }
+
+    return 0;
+}
